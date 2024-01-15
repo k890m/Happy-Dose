@@ -1,0 +1,70 @@
+.logo-title {
+  color: #000;
+  font-family: Lato;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main-image {
+  width: 28.5rem;
+  height: 28.625rem;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  color: #000;
+  font-family: Lato;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  list-style: none;
+}
+
+.phrase {
+  color: #000;
+  font-family: MuseoModerno;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 46rem;
+  height: 15.875rem;
+  flex-shrink: 0;
+}
+
+.sign-up-form input {
+  border-radius: 6.25rem;
+  border: 1px solid #000;
+  background: rgba(234, 234, 234, 0);
+  width: 37.25rem;
+  height: 3.5625rem;
+  flex-shrink: 0;
+}
+
+.about h1 {
+  color: #000;
+  text-align: center;
+  font-family: MuseoModerno;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about p {
+  color: #000;
+  font-family: Lato;
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about img {
+  width: 44.4375rem;
+  height: 40.5rem;
+  flex-shrink: 0;
+}
