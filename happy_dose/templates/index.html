@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
   </head>
   <body>
     <main>
@@ -48,7 +50,7 @@
         </div>
       </nav>
       <img
-        src="assets/yogalineart.png"
+        src="{% static 'assets/yogalineart.png' %}"
         alt="Line art of a person meditating"
         class="main-image"
       />
@@ -94,7 +96,7 @@
           together!
         </p>
 
-        <img src='assets/heartperson.png' alt="line art of a person looking up
+        <img src="{% static 'assets/heartperson.png' %}" alt="line art of a person looking up
         at a heart"
       </div>
     </main>
