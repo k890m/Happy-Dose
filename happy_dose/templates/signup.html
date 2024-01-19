@@ -63,7 +63,8 @@
         Things
       </h2>
 
-      <form>
+      <form action="" method="POST">
+        {% csrf_token %}
         <div class="sign-up-form">
           <input type="text" placeholder="Enter Email" name="email" required />
           <input type="text" placeholder="Enter Username" name="username" required />
@@ -85,6 +86,7 @@
 
       <div id="about" class="about">
         <h1>About</h1>
+        <br>
         <p>
           At Happy Dose, our mission is simple yet powerful: to encourage
           happiness in every moment. We believe that by fostering a community

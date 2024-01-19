@@ -9,6 +9,8 @@
   width: 15.625rem;
   height: 2.4375rem;
   flex-shrink: 0;
+  margin: auto;
+  text-align: center;
 }
 
 nav {
