@@ -66,8 +66,8 @@
       <form action="" method="POST">
         {% csrf_token %}
         <div class="sign-up-form">
-          <input type="text" placeholder="Enter Email" name="email" required />
           <input type="text" placeholder="Enter Username" name="username" required />
+          <input type="text" placeholder="Enter Email" name="email" required />
           <input
             type="password"
             placeholder="Enter Password"
@@ -83,7 +83,16 @@
           <button type="submit" class="sign-up-btn">Sign Up</button>
         </div>
       </form>
-
+      <div>
+        <style>
+          h5{
+            color: red; 
+          }
+        </style>
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+      </div> 
       <div id="about" class="about">
         <h1>About</h1>
         <br>

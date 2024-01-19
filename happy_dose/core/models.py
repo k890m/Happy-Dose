@@ -12,4 +12,4 @@ class Profile(models.Model):
     location = models.CharField(blank=True ,max_length=150)
     
     def __str__(self):
-        return self.user.get_username 
+        return self.user.get_username() 
