@@ -2,27 +2,43 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link ref="stylesheet" href="{% static login.css%}"
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link ref="stylesheet" href="{% static login.css%}" />
+    <title>Login</title>
+  </head>
 
-</head>
-
-<body>
-    <form>
-        <div class="login-up-form">
-          <input type="text" placeholder="Enter Email" name="email" required />
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="password"
-            required
-
-          <button type="submit" class="sign-up-btn">Login</button>
+  <body>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="login-up-form">
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          required
+        />
+        <button type="submit" class="sign-up-btn">Login</button>
+        <div>
+          <style>
+            h5 {
+              color: red;
+            }
+          </style>
+          {% for message in messages %}
+          <h5>{{message}}</h5>
+          {% endfor %}
         </div>
-      </form>
-    
-</body>
+      </div>
+    </form>
+
+    <p>Not Registered? <a href="signup">Click Here</a></p>
+  </body>
 </html>
