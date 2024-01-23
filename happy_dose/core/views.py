@@ -9,6 +9,10 @@ from .models import Profile
 @login_required(login_url = 'signup')
 def index(request):
     return render(request, 'index.html')
+
+@login_required(login_url = 'signup')
+def settings(request):
+    return render(request, 'settings.html')
     
 def signup(request):
     
@@ -28,6 +32,10 @@ def signup(request):
             else:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
+                
+                #Login and go to settings
+                user_login = auth.authenticate(username = username, password = password)
+                auth.login(request, user_login)
                 
                 #create profile object 
                 user_model = User.objects.get(username=username)
