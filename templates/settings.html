@@ -6,33 +6,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'settings.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
+      rel="stylesheet"
+    />
     <title>Settings</title>
   </head>
 
   <body>
-    <a href="/">Home</a>
-    <a href="profile">Profile</a>
+    <nav class="nav-bar">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="61"
+        height="61"
+        viewBox="0 0 61 61"
+        fill="none"
+      >
+        <path
+          opacity="0.5"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M20.6027 46.3778C13.4657 40.8776 5.08331 34.4193 5.08331 23.2232C5.08331 10.8631 19.0625 2.09689 30.5 13.9817V52.1042C27.9583 52.1042 25.4166 50.1471 22.7784 48.0629C22.0744 47.5088 21.3449 46.9497 20.6027 46.3778Z"
+          fill="black"
+        />
+        <path
+          d="M38.2216 48.0629C45.7017 42.1713 55.9167 35.5833 55.9167 23.2258C55.9167 10.8656 41.9375 2.09942 30.5 13.9843V52.1042C33.0417 52.1042 35.5833 50.1471 38.2216 48.0629Z"
+          fill="black"
+        />
+      </svg>
+      <div class="logo-title"><h1>HappyDose</h1></div>
 
-    <h1>Account Settings for <b>{{user.username}}</b></h1>
-    <form action="" method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      <div>
-        <label for="bio">Bio</label>
-        <textarea id="bio" name="bio" rows="3">{{user_profile.bio}}</textarea>
-      </div>
+      <a href="/">Home</a>
+      <a href="profile">Profile</a>
+    </nav>
 
-      <div>
-        <label for="location">Location</label>
-        <input id="location" name="location" value="{{user_profile.location}}"/>
-      </div>
+    <div class="settings-card">
+      <h1>Account Settings for <b>{{user.username}}</b></h1>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" rows="3">{{user_profile.bio}}</textarea>
+        </div>
 
-      <div>
-        <label>Profile Image</label>
-        <img class='profile_img' src="{{user_profile.profile_img.url}}"/>
-        <input type="file" name="image" value=""/>
-      </div>
-      <button><a href="/">Cancel</a></button>
-      <button type="submit">Save</button>
-    </form>
+        <div>
+          <label for="location">Location</label>
+          <input
+            id="location"
+            name="location"
+            value="{{user_profile.location}}"
+          />
+        </div>
+
+        <div class="profile-img-section">
+          <label>Profile Image</label>
+          <img class="profile_img" src="{{user_profile.profile_img.url}}" />
+          <input type="file" name="image" value="" />
+        </div>
+        
+        <button><a href="/">Cancel</a></button>
+        <button type="submit">Save</button>
+      </form>
+    </div>
   </body>
 </html>

@@ -1,4 +1,92 @@
+body {
+  background: #e3e3e3;
+}
+
 .profile_img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
+}
+
+nav {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-family: Lato;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  justify-content: space-between;
+  margin: 0 15px;
+  cursor: pointer;
+  text-align: right;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.settings-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-card h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.settings-card form {
+  display: grid;
+  gap: 15px;
+}
+
+.settings-card label {
+  font-weight: bold;
+}
+
+.settings-card textarea,
+.settings-card input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.settings-card .profile_img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+.settings-card button {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.settings-card button a {
+  color: white;
+  text-decoration: none;
+}
+
+.settings-card button + button {
+  background-color: #28a745;
+}
+
+.settings-card button:hover,
+.settings-card button + button:hover {
+  background-color: #555;
 }
