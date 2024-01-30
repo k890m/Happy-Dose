@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Profile
+from .models import Profile, Post
 
 # Create your views here.
 @login_required(login_url = 'signup')
@@ -92,7 +92,17 @@ def logout(request):
     auth.logout(request)
     return redirect('login')
 
-
 @login_required(login_url = 'signup')
 def profile(request):
-    return render(request, 'profile.html')
+    user_object = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_object)
+    
+    return render(request, 'profile.html', {'user_profile': user_profile})
+
+@login_required(login_url = 'signup')
+def upload(request):
+    
+    if request.method == 'POST':
+        pass
+    
+    return HttpResponse('<h1>Upload View<h1>')
