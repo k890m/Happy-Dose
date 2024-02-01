@@ -9,6 +9,12 @@
   <h1>This is the main dashboard page.</h1>
   <a href="settings">Settings</a>
   <a href="logout">Log Out</a>
-  
+  <h1>Posts</h1>
+  {% for post in posts %}
+  <div class="post">
+    <p>Posted by @{{post.user}}</p>
+    <img src="{{post.image.url}}">
+  </div>
+  {% endfor %}
 </body>
 </html>

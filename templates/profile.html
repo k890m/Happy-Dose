@@ -63,7 +63,15 @@
       <label for="location">Location</label>
       <p>{{user_profile.location}}</p>
     </div>
-
+    <h1>Upload Post</h1>
+    <form action="upload" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label>Image</label>
+      <input type="file" name="image_upload" value="" />
+      <label>Caption</label>
+      <input type="text" name="caption" value="" />
+      <button class="submit-upload" type="submit">Upload</button>
+    </form>
     <h1>Your Posts</h1>
   </body>
 </html>
