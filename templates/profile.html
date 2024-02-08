@@ -19,9 +19,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="{% static 'pro.css' %}" />
+    <link rel="stylesheet" href="{% static 'profile.css' %}" />
 
-    <title>Profile</title>
+    <title>Profile of {{user_profile.user.username}}</title>
   </head>
 
   <body>
@@ -64,15 +64,16 @@
       <label for="location">Location</label>
       <p>{{user_profile.location}}</p>
     </div>
-    <h1>Upload Post</h1>
-    <form action="upload" method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      <label>Image</label>
-      <input type="file" name="image_upload" value="" />
-      <label>Caption</label>
-      <input type="text" name="caption" value="" />
-      <button class="submit-upload" type="submit">Upload</button>
-    </form>
-    <h1>Your Posts</h1>
+
+    <h1>Posts</h1>
+    <p>{{user_profile.user.username}} has posted {{user_post_length}} times</p>
+
+    {% for post in user_posts %}
+
+    <div class="posts">
+      <img src="{{post.image.url}}" />
+    </div>
+
+    {% endfor %}
   </body>
 </html>
