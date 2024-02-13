@@ -14,6 +14,22 @@ body {
   background-color: #f4f4f4;
 }
 
+.logo-title {
+  color: #000;
+  font-family: MuseoModerno;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline;
+  width: 15.625rem;
+  height: 2.4375rem;
+  flex-shrink: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -87,7 +103,6 @@ nav li {
   margin-bottom: 100px;
 }
 
-/* Style for the about description */
 .about p {
   max-width: 400px; 
 }
@@ -97,11 +112,11 @@ nav li {
   justify-content: space-between;
   align-items: center;
 }
-/* Style for the about image */
+
 .about-image-and-decs img {
   width: 100%;
   max-width: 600px; 
-  margin-left: 20px; /* Adjust the margin as needed for spacing between description and image */
+  margin-left: 20px; 
 }
 
 .sign-up-form {
