@@ -14,6 +14,12 @@ body {
   background-color: #f4f4f4;
 }
 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .logo-title {
   color: #000;
   font-family: MuseoModerno;
@@ -27,13 +33,6 @@ body {
   flex-shrink: 0;
   margin: auto;
   text-align: center;
-}
-
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 nav {
@@ -104,7 +103,7 @@ nav li {
 }
 
 .about p {
-  max-width: 400px; 
+  max-width: 400px;
 }
 
 .about-image-and-decs {
@@ -115,8 +114,8 @@ nav li {
 
 .about-image-and-decs img {
   width: 100%;
-  max-width: 600px; 
-  margin-left: 20px; 
+  max-width: 600px;
+  margin-left: 20px;
 }
 
 .sign-up-form {
