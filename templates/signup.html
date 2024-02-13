@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'sign.css' %}" />
   </head>
   <body>
     <main>
@@ -47,72 +47,91 @@
         <div>
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#signup">Sign Up</a></li>
             <li><a href="login">Login</a></li>
           </ul>
-
         </div>
       </nav>
-      <br>
-      <img
-        src="{% static 'assets/yogalineart.png' %}"
-        alt="Line art of a person meditating"
-        class="main-image"
-      />
-      <h2 class="phrase">
-        Brighten your feed, light up your day- Happy Dose, Appreciate the Little
-        Things
-      </h2>
+      <br />
+      <div class="image-and-phrase">
+        <img
+          src="{% static 'assets/yogalineart.png' %}"
+          alt="Line art of a person meditating"
+          class="main-image"
+        />
+        <h2 class="phrase">
+          Brighten your feed, light up your day- Happy Dose, Appreciate the
+          Little Things
+        </h2>
+      </div>
+      <div id="about" class="about">
+        <h1>About</h1>
+        <div class="about-image-and-decs">
+          <p>
+            At Happy Dose, our mission is simple yet powerful: to encourage
+            happiness in every moment. We believe that by fostering a community
+            focused on sharing positivity, we can collectively enhance the joy
+            in our lives. Research has shown that practicing gratitude can
+            significantly boost happiness levels. According to a study by Emmons
+            and McCullough (2003), expressing gratitude has a scientifically
+            proven impact on well-being. Each day, Happy Dose provides you with
+            a platform to share one thing that made you happy, embracing the
+            idea that acknowledging and appreciating the positive aspects of
+            life can lead to increased happiness. Join us on this journey of
+            spreading joy, one post at a time. Let's create a ripple effect of
+            happiness together!
+          </p>
 
-      <form action="" method="POST">
-        {% csrf_token %}
-        <div class="sign-up-form">
-          <input type="text" placeholder="Enter Username" name="username" required />
-          <input type="text" placeholder="Enter Email" name="email" required />
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="password"
-            required
+          <img
+            src="{% static 'assets/heartperson.png' %}"
+            alt="line art of a person looking up at a heart"
           />
-          <input
-            type="password"
-            placeholder="Enter Password Again"
-            name="password-repeat"
-            required
-          />
-          <button type="submit" class="sign-up-btn">Sign Up</button>
         </div>
-      </form>
+      </div>
+
+      <div id="signup" class="sign-in-heading"><h1>Sign Up</h1></div>
+      <div class="form-signup">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="sign-up-form">
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="username"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              required
+            />
+            <input
+              type="password"
+              placeholder="Enter Password Again"
+              name="password-repeat"
+              required
+            />
+            <button type="submit" class="sign-up-btn">Sign Up</button>
+          </div>
+        </form>
+      </div>
+
       <div>
         <style>
-          h5{
-            color: red; 
+          h5 {
+            color: red;
           }
         </style>
         {% for message in messages %}
         <h5>{{message}}</h5>
         {% endfor %}
-      </div> 
-      <div id="about" class="about">
-        <h1>About</h1>
-        <br>
-        <p>
-          At Happy Dose, our mission is simple yet powerful: to encourage
-          happiness in every moment. We believe that by fostering a community
-          focused on sharing positivity, we can collectively enhance the joy in
-          our lives. Research has shown that practicing gratitude can
-          significantly boost happiness levels. According to a study by Emmons
-          and McCullough (2003), expressing gratitude has a scientifically
-          proven impact on well-being. Each day, Happy Dose provides you with a
-          platform to share one thing that made you happy, embracing the idea
-          that acknowledging and appreciating the positive aspects of life can
-          lead to increased happiness. Join us on this journey of spreading joy,
-          one post at a time. Let's create a ripple effect of happiness
-          together!
-        </p>
-
-        <img src="{% static 'assets/heartperson.png' %}" alt="line art of a person looking up
-        at a heart"
       </div>
     </main>
   </body>
