@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Profile, Post, LikePost
+from .models import Profile, Post, LikePost, FollowersCount
 
 # Create your views here.
 @login_required(login_url = 'signup')
@@ -40,6 +40,22 @@ def settings(request):
     
         return redirect('settings')
     return render(request, 'settings.html', {'user_profile': user_profile})
+
+@login_required(login_url = 'signup')   
+def follow(request):
+    if request.method == 'POST':
+        follower = request.POST['follower']
+        user = request.POST['user']
+        
+        if FollowersCount.objects.filter(follower=follower, user=user).first():
+            delete_follower = FollowersCount.object.get(follower=follower, user=user)
+            delete_follower.delete()
+            return redirect('/profile/'+user)
+        else:
+            new_follower = FollowersCount.objects.create(follower=follower, user=user)
+            new_follower.save()
+    else:
+        return redirect('/')
     
 @login_required(login_url = 'signup')
 def like_post(request):
