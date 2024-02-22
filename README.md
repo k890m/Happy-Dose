@@ -7,7 +7,7 @@ Citation: https://healthcare.utah.edu/healthfeed/2021/11/practicing-gratitude-be
 
 ## Features
 * User Authentication: Secure user authentication system for account creation and login.
-* Past a picture and add a caption
+* Post a picture and add a caption
 * Ability to like posts and follow your friends and family
 * Responsive Design: Enjoy a seamless experience across various devices with our responsive design.
 
