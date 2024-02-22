@@ -4,7 +4,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
     <script src="{% static 'index.js' %}"></script>
     <title>Home</title>
   </head>
@@ -30,7 +43,7 @@
         />
       </svg>
       <div class="logo-title"><h1>HappyDose</h1></div>
-      <a href="profile">Profile</a>
+      <a href="profile/{{user_profile.user}}">Profile</a>
       <a href="settings">Settings</a>
       <a href="logout">Log Out</a>
     </nav>
@@ -48,7 +61,7 @@
     <h1>Posts</h1>
     {% for post in posts %}
     <div class="post">
-      <p>Posted by <a href="profile">@{{post.user}}</a></p>
+      <p>Posted by <a href="profile/{{post.user}}">@{{post.user}}</a></p>
       <a href="{{post.image.url}}">
         <img src="{{post.image.url}}" />
       </a>
