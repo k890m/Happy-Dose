@@ -136,9 +136,9 @@ button.submit-upload:hover {
   border: 1px solid #ccc;
   padding: 10px;
   margin: 0 auto;
-  max-width: 400px; 
+  max-width: 400px;
+  margin-top: 20px;
 }
-
 
 .post p {
   font-weight: bold;
