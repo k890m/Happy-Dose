@@ -48,17 +48,19 @@
       <a href="logout">Log Out</a>
     </nav>
 
-    <h1>Upload Post</h1>
-    <form action="upload" method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      <label>Image</label>
-      <input type="file" name="image_upload" value="" />
-      <label>Caption</label>
-      <input type="text" name="caption" value="" />
-      <button class="submit-upload" type="submit">Upload</button>
-    </form>
+    <div class="upload-post">
+      <h1>Upload Post</h1>
+      <form action="upload" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Image</label>
+        <input type="file" name="image_upload" value="" />
+        <label>Caption</label>
+        <input type="text" name="caption" value="" />
+        <button class="submit-upload" type="submit">Upload</button>
+      </form>
+    </div>
 
-    <h1>Posts</h1>
+    <div class="post"><h1>Posts</h1></div>
     {% for post in posts %}
     <div class="post">
       <p>Posted by <a href="profile/{{post.user}}">@{{post.user}}</a></p>
