@@ -10,9 +10,6 @@ body {
 .logo-title {
   color: #000;
   font-family: MuseoModerno;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
   line-height: normal;
   display: inline;
   width: 15.625rem;
@@ -47,8 +44,11 @@ nav a:hover {
 
 nav h1 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
 }
+
 
 nav ul {
   display: flex;
